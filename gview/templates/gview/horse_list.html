@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gview/horse_list.html</title>
+</head>
+<body>
+    <h1>Horse List</h1>
+    <p>
+    {% if horse_list %}
+        <ul>
+        {% for horse in horse_list %}
+            <li><a href="{% url 'gview:horse' horse.id %}">{{ horse.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no horses in the database.</p>
+    {% endif %}
+    </p>
+</body>
+</html>

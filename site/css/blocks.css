@@ -1,0 +1,77 @@
+
+/* This is a partial blocks.css, you need to add more rules
+   to this file to complete the assignment.  Do not add any CSS
+   styling to the original index.htm / start.htm */
+
+   body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+}
+div { 
+    padding: 5px;
+    margin: 5px;
+   }
+
+/* Here is one of many  CSS rules you will need... */
+#one {
+    border-style: solid;
+    border-color: rgb(0, 0, 255);
+    border-width: 5px;
+    background-color: #EAECEE;
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+}
+#two {
+    border-style: solid;
+    border-color: rgb(5, 125, 3);
+    border-width: 5px;
+    background-color: #EAECEE;
+    position: fixed; 
+    top: 20px; 
+    right: 20px;
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+}
+
+#three {
+    border-style: solid;
+    border-color: rgb(255, 208, 0);
+    border-width: 5px;
+    background-color: #EAECEE;
+    position: fixed; 
+    top: 20px; 
+    left: 20px;
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+}
+#four {
+    border-style: solid;
+    border-color: rgb(255, 255, 0);
+    border-width: 5px;
+    background-color: #EAECEE;
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px;
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+}
+#link {
+    background-color: #587d37;
+    position: fixed; 
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);  
+    padding: 5px;
+    margin: 5px;
+}
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}

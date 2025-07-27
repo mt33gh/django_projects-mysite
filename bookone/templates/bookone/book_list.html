@@ -1,0 +1,53 @@
+{% extends "my_base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Book List</h1>
+  <p><a href="{% url 'bookone:book_create' %}">Add a book</a></p>
+  {% if book_list %}
+  <ul>
+    {% for book in book_list %}
+      <li>
+         id = {{ book.id }}, title = {{ book.title }}, ISBN = {{ book.isbn }}, Language = {{ book.lang }}
+         (<a href="{% url 'bookone:book_update' book.id %}">Update</a> |
+          <a href="{% url 'bookone:book_delete' book.id %}">Delete</a>) 
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+
+  <h1>Language List</h1>
+  <p><a href="{% url 'bookone:lang_create' %}">Add a language</a></p>
+  {% if lang_list %}
+  <ul>
+    {% for lang in lang_list %}
+      <li>
+         id = {{ lang.id }}, Language = {{ lang.name }}
+         (<a href="{% url 'bookone:lang_update' lang.id %}">Update</a> |
+          <a href="{% url 'bookone:lang_delete' lang.id %}">Delete</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no languages registered.</p>
+  {% endif %}
+
+  <h1>Instance List</h1>
+  <p><a href="{% url 'bookone:ins_create' %}">Add an instance</a></p>
+  {% if ins_list %}
+  <ul>
+    {% for ins in ins_list %}
+      <li>
+         id = {{ ins.id }}, title = {{ ins.book }}, due back = {{ ins.due_back }}
+         (<a href="{% url 'bookone:ins_update' ins.id %}">Update</a> |
+          <a href="{% url 'bookone:ins_delete' ins.id %}">Delete</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no instances checked out.</p>
+  {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>mysite/Accounts</title>
+    </head>
+    <body>
+        <h1>/mysite/accounts/templates/accounts/index.html</h1>
+        <p>Press this button to logout:</p>
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{% url 'login' %}">
+          <button type="submit">Logout</button>
+        </form>
+    </body>
+</html>

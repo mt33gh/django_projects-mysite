@@ -1,0 +1,24 @@
+{% extends 'my_base_bootstrap.html' %}
+
+{% block head %}
+<style> ul { list-style-type: none; margin: 0; padding: 0; } </style> <!-- remove dots -->
+<style>li {display: inline; }</style> <!-- horizontal -->
+<style>li a { width: 60px; padding: 10px; color: #ffffff; text-decoration: none; background-color: #3333ff; } </style>
+<style>li a:hover { background-color: #009999; } </style> <!-- change color on hover -->
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-radius:10px !important">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'menu:main' %}">{{ settings.APP_NAME }}</a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      {% url 'menu:main' as xyz %}
+      <li class="nav-item"><a href="{% url 'menu:main' %}" class="nav-link">Home</a></li>
+      {% url 'menu:page1' as abc1 %}
+      <li class="nav-item"><a href="{% url 'menu:page1' %}" class="nav-link">Page 1</a></li>
+      {% url 'menu:page2' as abc2 %}
+      <li class="nav-item"><a href="{% url 'menu:page2' %}" class="nav-link">Page 2</a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}

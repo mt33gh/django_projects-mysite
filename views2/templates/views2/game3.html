@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>Modified Danger Function with a POST Method</h1>
+<p>Now this page is safe.</p>
+<p>This page persists.</p>
+<form method="post" action="">
+    {% csrf_token %}
+    <label for="guess">Enter your guess:</label>
+    <input type="text" id="guess" name="guess">
+    <input type="submit" value="Submit">
+</form>
+{% if safe_guess %}
+    <p>Your guess was: {{safe_guess}}</p>
+{% endif %}
+</body>
+</html>

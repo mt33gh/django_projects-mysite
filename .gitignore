@@ -1,0 +1,25 @@
+# Ignore secret settings
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Django migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.py
+
+# VSCode settings or other editor junk
+.vscode/
+*.swp
+
+# Database files
+*.sqlite3
+
+# Media/static (if needed)
+media/
+staticfiles/
+
+# other
+venv/

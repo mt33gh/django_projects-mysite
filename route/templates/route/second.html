@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This is route/second.html</title>
+</head>
+<body>
+    <h1>This is route/second.html</h1>
+    <p>You are just in here.</p>
+
+    <h2>Reverse URLs</h2>
+    <p>
+    <ul>
+        <li><a href="{% url 'route:first-view' %}">Go back to route:first-view</a></li>
+        <li>{{ x1 }} (x1 from context)</li>
+        <li>{{ x2 }} (x2 from context)</li>
+        <li>{{ x3 }} (x3 from context)</li>
+    </ul>
+    </p>
+</body>
+</html>

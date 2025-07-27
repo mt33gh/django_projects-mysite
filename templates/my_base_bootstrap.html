@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Default Title{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head>
+<body>
+<h1>This is /mysite/templates/my_base_bootstrap.html</h1>
+{% block navbar %} {% endblock %}
+<div class="container">
+  {% block content %}
+  {% endblock %}
+</div>
+</body>
+</html>

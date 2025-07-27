@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gview/main.html</title>
+</head>
+<body>
+    <h1>This is gview's main page.</h1>
+    <p>You can put list items here.</p>
+    <ul>
+        <li><a href="{% url 'gview:cats' %}">/gview/cats (url 'gview:cats')</a></li>
+        <li><a href="{% url 'gview:cat' 42 %}">{% url 'gview:cat' 42 %} (url 'gview:cat' 42)</a></li> 
+        <li><a href="{% url 'gview:dogs' %}">/gview/dogs (url 'gview:dogs')</a></li>
+        <li><a href="{% url 'gview:dog' 42 %}">{% url 'gview:dog' 42 %} (url 'gview:dog' 42)</a></li>
+        <li><a href="{% url 'gview:horses' %}">/gview/horses (url 'gview:horses')</a></li>
+        <li><a href="{% url 'gview:cars' %}">/gview/cars (url 'gview:cars')</a></li>
+        <li><a href="{% url 'gview:whatever' %}">/gview/wacky (url 'gview:whatever') This is unconventional.</a></li>
+    </ul>
+
+</body>
+</html>
